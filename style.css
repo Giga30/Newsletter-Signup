@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    max-width: 350px;
+    min-width: 327px;
+    height: 430px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 22px 0 0 22px;
+    box-sizing: border-box;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+
+.form-container h1{
+    font-size: 40px;
+    color: hsl(234, 29%, 20%);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.svg {
+    width: 299.81px;
+    height: 430px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 22px 22px 0;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+ul {
+    font-size: small;
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Adjust the padding as needed */
+}
+
+ul li {
+    position: relative;
+    padding-left: 10px;
+}
+
+ul li::before {
+    content: url("./assets/images/icon-list.svg"); /* You can use other symbols or images */
+    position: absolute;
+    left: 0; /* Position the bullet inside the padding */
+    text-indent: -20px; /* Negative indent to move the bullet out of the padding */
+}
+
+.svg img{
+    height: 400px;
+}
+
+.desc {
+    font-size: small;
+}
+
+.form p {
+    font-size: x-small;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px hsl(231, 7%, 60%);
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: small;
+    transition: 200ms;
+}
+
+.form div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.placeholder-red::placeholder{
+    color: hsl(4, 100%, 67%);
+}
+
+button:hover {
+    background: rgb(255,104,87);
+    background: linear-gradient(90deg, rgba(255,104,87,1) 0%, rgba(255,145,55,1) 100%);
+    transform: scale(1.05);
+    box-shadow: 0px 7px 30px rgba(255,104,87,1);
+}
+
+.container-success {
+    width: 310px;
+    height: 310px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-success img {
+    width: 50px;
+}
+
+.container-success button{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-weight: 700;
+    font-size: small;
+    margin-top: 15px;
+    transition: 200ms;
+}
+
+.container-success h1 {
+    font-size: 40px;
+    color: hsl(234, 29%, 20%);
+}
+
+.container-success p {
+    font-size: small;
+    color: hsl(234, 29%, 20%);
+}
+
+.container-success button:hover {
+    background: rgb(255,104,87);
+    background: linear-gradient(90deg, rgba(255,104,87,1) 0%, rgba(255,145,55,1) 100%);
+    transform: scale(1.05);
+    box-shadow: 0px 7px 30px rgba(255,104,87,1);
+}
+
+.container-success p span {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 626px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .form-container {
+        border-radius: 0;
+        max-width: none;
+        min-width: none;
+        width: 100vw;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    .svg img{
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
+        width: 375px;
+        height: auto;
+    }
+
+    .svg {
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .form {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .container-success {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .container-success img{
+        position: relative;
+        top: 70px;
+    }
+}
